@@ -1,5 +1,4 @@
 public class App {
-    
     public static void mesajYaz(){
         System.out.println("merhaba");
     }
@@ -15,7 +14,22 @@ public class App {
         return(x+y);
     }
     public static void main(String[] args) throws Exception {
-     mesajYaz();
+     
+       ogrenci o1;   //tanımlama
+       o1=new ogrenci();  //bellekte yer ayırdık
+       o1.ogrNo=1234;      
+       o1.ogrAd="Hatice";
+       o1.ogrSoyad="Kaymak";
+       o1.yas=20;
+ 
+       System.out.println(o1.ogrSoyad);
+     
+     
+     
+     
+     
+     
+        /*mesajYaz();
      mesajYaz("Java'da fonksiyon kodluyorum");
 
      int a=5,b=10;
@@ -25,6 +39,6 @@ public class App {
      double sonuc2=topla(c, d);
     
      mesajYaz("sonuc1="+sonuc1);
-     mesajYaz("sonuc2="+sonuc2);
+     mesajYaz("sonuc2="+sonuc2);*/
     }
 }
