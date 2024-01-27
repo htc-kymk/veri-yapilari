@@ -18,12 +18,22 @@ public class App {
 
     public static void main(String[] args) throws Exception {
      
+    dortgen d1=new dortgen();
+    d1.boyutGoster();
+    System.out.println("alan:"+d1.alan()); 
+
+
+    dortgen d2=new dortgen(5);
+    d2.boyutGoster();
+
+    dortgen d3=new dortgen(5,10);
+    d3.boyutGoster();
+
+    d2.setYukseklik(15);
+    d3.getGenislik();
+    d3.setGenislik(20);
+
     
-
-
-
-
-
 
 
 
