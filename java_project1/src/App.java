@@ -13,16 +13,42 @@ public class App {
     public static double topla(double x,double y){
         return(x+y);
     }
+
+
+
     public static void main(String[] args) throws Exception {
      
-       ogrenci o1;   //tanımlama
-       o1=new ogrenci();  //bellekte yer ayırdık
-       o1.ogrNo=1234;      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*  ogrenci o1;   //tanımlama
+       o1=new ogrenci(1234,"hatice","kaymak",20);  //bellekte yer ayırdık
+       
+    
+    System.out.println(o1.ogrSoyad);
+      
+      
+      
+      
+        o1.ogrNo=1234;      
        o1.ogrAd="Hatice";
        o1.ogrSoyad="Kaymak";
-       o1.yas=20;
+       o1.yas=20;*/
  
-       System.out.println(o1.ogrSoyad);
+     
      
      
      
