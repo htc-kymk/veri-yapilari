@@ -11,11 +11,12 @@ public class CBListe {
   if (this.ilk==null){
     this.ilk=yeni;
     return;
+  }
     this.ilk.setOnceki(yeni);
     yeni.setSonraki(this.ilk);
 
     this.ilk=yeni;
-}
+
 
    }
 }
