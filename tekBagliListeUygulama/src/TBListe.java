@@ -83,4 +83,67 @@ public void listele(){
     System.out.println("----------------");
 
 }
+
+    //listede bir değer arar ve bulduğunda o düğümü geri döndürür
+    public Dugum elemanBul(int deger){
+        Dugum temp=this.ilk;
+        Dugum bulunan=null;
+        while(temp!=null){
+            if(temp.getVeri()!=deger){
+                temp=temp.getSonraki();
+            }
+            else{
+               bulunan = temp;
+               break;
+            }
+    
+        }
+      return bulunan;
+    }
+  
+   //aranan değerden listede ka. tane olduğunu döndüren fonksiyon
+
+   public int elemanKacTane(int deger){
+    Dugum temp=this.ilk;
+    int sayac=0;
+    while (temp!=null){
+         
+        if(temp.getVeri()!=deger){
+            temp=temp.getSonraki();
+        }
+        else{
+            sayac++;
+            temp=temp.getSonraki();
+        }
+       
+    }
+    return sayac;
+   }
+   
+   //değeri,listede herhangi bir indekse ekleyen fonksiyon
+public void arayaEkle(int deger,int indis){
+    if((this.ilk==null)|| (indis==1)){
+        this.basaEkle(deger);
+        return;
+    }
+    Dugum yeni=new Dugum(deger);
+    Dugum temp=this.ilk;
+    int sayac=1;
+
+    while(temp.getSonraki()!=null){
+        if(sayac+1==indis){
+            break;
+        }
+        sayac++;
+        temp=temp.getSonraki();
+    }
+    yeni.setSonraki(temp.getSonraki());
+    temp.setSonraki(yeni);
+}
+  //araya ekle fonksioyonunun sona ekleme kontrolü
+   
+ 
+
+
+
 }
