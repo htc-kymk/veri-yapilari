@@ -28,5 +28,6 @@ public class Dugum {
     public void setSonraki(Dugum ref){
         this.sonraki=ref;
     }
+    
 
 }
