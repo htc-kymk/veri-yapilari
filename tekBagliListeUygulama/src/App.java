@@ -14,7 +14,13 @@ public class App {
         myList.basaEkle(30);
         
         myList.sonaEkle(40);
+
+        Dugum d=new Dugum(50);
+        myList.basaEkle(d);
+        Dugum dd=new Dugum(60);
+        myList.sonaEkle(dd);
+
         myList.listele();
-        myList.eleman();
+       System.out.println("eleman sayısı: "+ myList.eleman());
     }
 }

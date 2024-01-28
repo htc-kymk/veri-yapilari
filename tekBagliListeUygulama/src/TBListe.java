@@ -13,6 +13,11 @@ public class TBListe {
           this.ilk=yeni;
        }
 
+       public void basaEkle(Dugum yeni){
+          yeni.setSonraki(this.ilk);
+          this.ilk=yeni;
+       }
+
 
 
     //listenin sonuna eleman ekleme
@@ -30,22 +35,34 @@ public class TBListe {
      temp.setSonraki(yeni);
      
    }
+public void sonaEkle(Dugum yeni){
+    if(this.ilk==null){
+        this.ilk=yeni;
+        return;
+    }
+    Dugum temp=this.ilk;
+    while(temp.getSonraki()!=null){
+        temp=temp.getSonraki();
+    }
+    temp.setSonraki(yeni);
+}
 
 
     //eleman sayısını bulma
-public void eleman(){
+public int eleman(){
 
-    int sayac=1;
+    int sayac=0;
     if(this.ilk==null){
         System.out.println("Lİste Boş");
     }
      
    Dugum temp=this.ilk;
-   while(temp.getSonraki()!=null){
-    temp=temp.getSonraki();
+   while(temp!=null){
     sayac++;
+    temp=temp.getSonraki();
    }
-   System.out.println("eleman sayısı:"+sayac);
+   return sayac;
+   
 }
 
 
