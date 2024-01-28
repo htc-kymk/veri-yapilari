@@ -1,4 +1,5 @@
 public class CBList {
+
     private Dugum ilk;
  
  public CBList(){
