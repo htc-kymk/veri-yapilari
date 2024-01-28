@@ -23,5 +23,7 @@ public class App {
         myList.listele();
        System.out.println("eleman sayısı: "+ myList.eleman());
        System.out.println(" "+myList.elemanKacTane(10));
+
+       
     }
 }

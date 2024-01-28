@@ -140,7 +140,27 @@ public void arayaEkle(int deger,int indis){
     yeni.setSonraki(temp.getSonraki());
     temp.setSonraki(yeni);
 }
-  //araya ekle fonksioyonunun sona ekleme kontrolü
+  //değeri listeden silen fonk(birden fazla varsa ilk bulduğu)
+  
+  public int elemanSil(int deger){
+    if(this.ilk==null){
+        return -1;
+    }
+    if(this.ilk.getVeri()==deger) {
+        this.ilk=this.ilk.getSonraki();
+        return 0;
+    }
+    Dugum temp=this.ilk;
+    while(temp.getSonraki().getVeri()!=deger){
+        if(temp.getSonraki().getSonraki()==null){
+            return -2;
+        }
+        temp=temp.getSonraki();
+    }
+    temp.setSonraki(temp.getSonraki().getSonraki());
+    return 0;
+
+  }
    
  
 
